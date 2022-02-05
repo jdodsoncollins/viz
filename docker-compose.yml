@@ -1,0 +1,20 @@
+# This docker-compose is for local development / test only
+
+version: '3.6'
+
+services:
+  # Server
+  server:
+    image: 
+    volumes:
+      - ./packages/server/env/.env.local:/usr/src/viz/packages/server/env/.env.local
+    ports:
+      - '4000:4000'
+    environment:
+      - NODE_ENV=local
+
+  # Client
+  client:
+    image:
+    ports:
+      - '8000:80'

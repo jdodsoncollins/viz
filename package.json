@@ -1,0 +1,35 @@
+{
+  "name": "viz",
+  "version": "1.0.0",
+  "author": "Jeremy Collins",
+  "description": "Simple boilerplate for a Nest + React project",
+  "directories": {
+    "doc": "docs"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "references": [
+    {
+      "path": "packages/domain"
+    },
+    {
+      "path": "packages/lib"
+    }
+  ],
+  "scripts": {
+    "generate:version": "./scripts/generate_version.sh",
+    "start:client": "pnpm start:dev --filter @viz/client",
+    "start:server": "pnpm start:dev --filter @viz/server",
+    "start:domain": "pnpm start:dev --filter @viz/domain",
+    "start:lib": "pnpm start:dev --filter @viz/lib",
+    "start:common": "(pnpm start:domain & pnpm start:lib)",
+    "build:domain": "pnpm build --filter @viz/domain",
+    "build:lib": "pnpm build --filter @viz/lib",
+    "build:common": "pnpm build:domain && pnpm build:lib",
+    "build-push:server": "PACKAGE=server ./scripts/build_and_push.sh",
+    "build-push:client": "PACKAGE=client ./scripts/build_and_push.sh",
+    "lint": "pnpm lint"
+  }
+}
