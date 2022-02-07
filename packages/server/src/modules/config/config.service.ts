@@ -16,7 +16,7 @@ export class ConfigService {
     PORT: Joi.number().default(4000),
     SECRET_JWT_KEY: Joi.string().required(),
   });
-  private envConfig: DotenvParseOutput;
+  public envConfig: DotenvParseOutput;
   private logger = new Logger(ConfigService.name);
 
   constructor() {
