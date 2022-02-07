@@ -3,18 +3,18 @@ import { join } from 'path';
 import { readFileSync, readdirSync } from 'fs';
 
 import { DotenvParseOutput, parse } from 'dotenv';
-import { number, object, string } from 'joi';
+import Joi from 'joi';
 import { InternalServerErrorException, Logger } from '@nestjs/common';
 
 export class ConfigService {
   public rootDir: string;
   public runningDir: string;
 
-  private readonly configSchema = object({
-    CORS_WHITELIST: string().required(),
-    HOST: string().required(),
-    PORT: number().default(4000),
-    SECRET_JWT_KEY: string().required(),
+  private readonly configSchema = Joi.object({
+    CORS_WHITELIST: Joi.string().required(),
+    HOST: Joi.string().required(),
+    PORT: Joi.number().default(4000),
+    SECRET_JWT_KEY: Joi.string().required(),
   });
   private envConfig: DotenvParseOutput;
   private logger = new Logger(ConfigService.name);

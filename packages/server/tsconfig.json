@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "outDir": "dist",
     "paths": {
       "~/*": ["src/*"]
