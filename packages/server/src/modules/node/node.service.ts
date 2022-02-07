@@ -6,10 +6,10 @@ import { Node, Prisma } from '@prisma/client';
 export class NodeService {
   constructor(private prisma: PrismaService) {}
 
-  async node({ id }: { id: number}): Promise<Node | null> {
+  async node({ id }: { id: number }): Promise<Node | null> {
     return this.prisma.node.findUnique({
       where: {
-        id: +id,
+        id: ~~id,
       },
     });
   }

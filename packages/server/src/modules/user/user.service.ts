@@ -6,11 +6,11 @@ import { Prisma, User } from '@prisma/client';
 export class UserService {
   constructor(private prisma: PrismaService) {}
 
-  async user(
-    userWhereUniqueInput: Prisma.UserWhereUniqueInput
-  ): Promise<User | null> {
+  async user({ id }: { id: number }): Promise<User | null> {
     return this.prisma.user.findUnique({
-      where: userWhereUniqueInput,
+      where: {
+        id: ~~id,
+      },
     });
   }
 
