@@ -1,4 +1,4 @@
-# Contributing to this Nest - React boilerplate
+# Contributing to this project
 
 ## Coding styles
 

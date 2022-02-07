@@ -102,6 +102,7 @@ importers:
       '@nestjs/platform-express': ^8.2.6
       '@nestjs/schematics': ^8.0.5
       '@nestjs/testing': ^8.2.6
+      '@prisma/client': ^3.9.1
       '@types/express': ^4.17.13
       '@types/jest': 27.4.0
       '@types/node': ^17.0.15
@@ -142,6 +143,7 @@ importers:
       '@nestjs/cli': 8.2.0_eslint@8.8.0
       '@nestjs/schematics': 8.0.5_typescript@4.5.5
       '@nestjs/testing': 8.2.6_b893ca8083ee374883b6d648098a9aeb
+      '@prisma/client': 3.9.1
       '@types/express': 4.17.13
       '@types/jest': 27.4.0
       '@types/node': 17.0.15
@@ -1089,6 +1091,23 @@ packages:
     transitivePeerDependencies:
       - encoding
     dev: false
+
+  /@prisma/client/3.9.1:
+    resolution: {integrity: sha512-aLwfXKLvL+loQ0IuPPCXkcq8cXBg1IeoHHa5lqQu3dJHdj45wnislA/Ny4UxRQjD5FXqrfAb8sWtF+jhdmjFTg==}
+    engines: {node: '>=12.6'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 3.9.0-58.bcc2ff906db47790ee902e7bbc76d7ffb1893009
+    dev: true
+
+  /@prisma/engines-version/3.9.0-58.bcc2ff906db47790ee902e7bbc76d7ffb1893009:
+    resolution: {integrity: sha512-5Dh+qTDhpPR66w6NNAnPs+/W/Qt4r1DSd+qhfPFcDThUK4uxoZKGlPb2IYQn5LL+18aIGnmteDf7BnVMmvBNSQ==}
+    dev: true
 
   /@rollup/pluginutils/4.1.2:
     resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}

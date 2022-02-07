@@ -30,6 +30,8 @@
     "build:common": "pnpm build:domain && pnpm build:lib",
     "build-push:server": "PACKAGE=server ./scripts/build_and_push.sh",
     "build-push:client": "PACKAGE=client ./scripts/build_and_push.sh",
+    "api:studio": "pnpm studio --filter @viz",
+    "api:generate": "pnpm generate --filter @viz/server",
     "lint": "pnpm lint"
   }
 }
