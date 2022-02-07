@@ -2,7 +2,6 @@
   "name": "@viz/server",
   "version": "1.0.0",
   "description": "Backend of the Nest + React boilerplate",
-  "license": "LGPL-3.0-or-later",
   "main": "src/main.ts",
   "scripts": {
     "generate:version": "cd ../.. && pnpm generate:version",
