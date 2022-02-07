@@ -31,7 +31,7 @@ By default, the webpack dev server is listening to the [http://localhost:8000](h
 
 ```sh
 # Runs the webpack dev server (using HMR)
-yarn start:dev
+pnpm start:dev
 ```
 
 As Vite is based on ESBuild for both JavaScript and TypeScript files, it doesn't do any type check. This has a number of advantages like a much faster response hot update and avoiding many useless disrupting errors occurring during prototyping while the types aren't completely respected yet. But the disadvantage is that the bundler won't detect any TypeScript error unless it is a JavaScript error.
@@ -39,7 +39,7 @@ As Vite is based on ESBuild for both JavaScript and TypeScript files, it doesn't
 To work around this limitation, the repository exposes a command to check your code is TypeScript compliant:
 
 ```sh
-yarn check-types
+pnpm check-types
 ```
 
 #### Pre-bundling on macOS
@@ -67,7 +67,7 @@ Once you are happy with your code, you can run a production version following th
 1. Build a production bundle:
 
    ```sh
-   yarn build
+   pnpm build
    ```
 
 2. Then you can serve the `dist` folder from any webserver application like [NGINX](https://nginx.org/) for example. The [nginx.conf](./nginx.conf) can be used as an example of a working NGINX configuration.

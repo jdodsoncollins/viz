@@ -38,16 +38,16 @@ To run the development server locally, you can use the bellow commands:
 
 ```sh
 # Runs the current version of the server
-yarn start
+pnpm start
 
 # Runs the current version of the server
 # + watches for file changes
-yarn start:dev
+pnpm start:dev
 
 # Runs the current version of the server
 # + watches for file changes
 # + opens a debugger connection (default port 9229)
-yarn start:debug
+pnpm start:debug
 ```
 
 #### Debug
@@ -63,13 +63,13 @@ Once you are happy with your code, you can run a production version following th
 1. Build a production bundle into a brand new `dist` folder:
 
    ```sh
-   yarn build
+   pnpm build
    ```
 
 2. Run the production bundle:
 
    ```sh
-   yarn start:prod
+   pnpm start:prod
    ```
 
 ## Test
@@ -78,17 +78,17 @@ Nest comes with `Jest` and `Supertest` testing frameworks to ease the testing pr
 
 ```sh
 # Runs the unit tests
-yarn test
+pnpm test
 
 # Runs the unit test
 # + watches for file changes
-yarn test:watch
+pnpm test:watch
 
 # Runs the end-to-end tests
-yarn test:e2e
+pnpm test:e2e
 
 # Describes the test coverage
-yarn test:cov
+pnpm test:cov
 ```
 
 ## Docker image

@@ -166,7 +166,7 @@ packages:
       {
         integrity: sha512-qqYEH8m/bwpngoLDMFuth8ykvoHxQ3aHHnAWfRXz9NXydwSfathG0VSYCctB126sK39JKIn+xq16CQAExxNu+Q==,
       }
-    engines: { node: '>= 10.13.0', npm: ^6.11.0, yarn: '>= 1.13.0' }
+    engines: { node: '>= 10.13.0', npm: ^6.11.0, pnpm: '>= 1.13.0' }
     dependencies:
       ajv: 6.12.6
       fast-json-stable-stringify: 2.1.0
@@ -180,7 +180,7 @@ packages:
       {
         integrity: sha512-2JEGXzFqjTqVls2uIZEE0sk4VY9a/alxBAq8BFYIVbvzKsL9gAY71Ztf21zrhQrZop9qeuLJtOAbp00QyYUaQA==,
       }
-    engines: { node: '>= 10.13.0', npm: ^6.11.0 || ^7.5.6, yarn: '>= 1.13.0' }
+    engines: { node: '>= 10.13.0', npm: ^6.11.0 || ^7.5.6, pnpm: '>= 1.13.0' }
     dependencies:
       ajv: 6.12.6
       fast-json-stable-stringify: 2.1.0
@@ -194,7 +194,7 @@ packages:
       {
         integrity: sha512-BkIoRf7L+3al+QIYWrgUlpNQP01tPSynPdTNb7z13tCHVv8Ag1CR5SJn1O8IGfFz7NxfX0Me0s7zyNTZ1QaWQQ==,
       }
-    engines: { node: '>= 10.13.0', npm: ^6.11.0, yarn: '>= 1.13.0' }
+    engines: { node: '>= 10.13.0', npm: ^6.11.0, pnpm: '>= 1.13.0' }
     hasBin: true
     dependencies:
       '@angular-devkit/core': 11.2.0
@@ -211,7 +211,7 @@ packages:
       {
         integrity: sha512-sMDacACJbA4pykiqgJf/RdW0damcf4mDqErGgEqs/bGG+SBUb8+wgt4cQnUwwVX5V2nMdvv7f0A84rgR6I3G2w==,
       }
-    engines: { node: '>= 10.13.0', npm: ^6.11.0, yarn: '>= 1.13.0' }
+    engines: { node: '>= 10.13.0', npm: ^6.11.0, pnpm: '>= 1.13.0' }
     dependencies:
       '@angular-devkit/core': 11.2.0
       ora: 5.3.0
@@ -223,7 +223,7 @@ packages:
       {
         integrity: sha512-x/IKgZDn6z/MzQ28WF2GTP2N+n78iySQhLu6n6bpmdrFp9noi9QASzN+mAFiqSNO8XpO9oyIB5y2ERl8KBrU1g==,
       }
-    engines: { node: '>= 10.13.0', npm: ^6.11.0 || ^7.5.6, yarn: '>= 1.13.0' }
+    engines: { node: '>= 10.13.0', npm: ^6.11.0 || ^7.5.6, pnpm: '>= 1.13.0' }
     dependencies:
       '@angular-devkit/core': 11.2.3
       ora: 5.3.0
@@ -1171,7 +1171,7 @@ packages:
       {
         integrity: sha512-0mN6qGnI31GVNYAKDdZ6ISiJMtN8Z0rekpJ/xNHK/lDNl/QkoJVBHDf68oEcNE8dvWMq86ULpznCdT1IBQ7YFA==,
       }
-    engines: { node: '>= 10.13.0', npm: ^6.11.0, yarn: '>= 1.13.0' }
+    engines: { node: '>= 10.13.0', npm: ^6.11.0, pnpm: '>= 1.13.0' }
     dependencies:
       '@angular-devkit/core': 11.2.0
       '@angular-devkit/schematics': 11.2.0
@@ -4117,7 +4117,7 @@ packages:
       {
         integrity: sha512-xLNufWQ1dfQUdZe48TGQlER/0OkcMnUB6lfbN9Tt13wsYyo+2DwcCbnOaPBo1PoFow/WL8pJPktGIdbJaHxAnw==,
       }
-    engines: { node: '>=10', yarn: '>=1.0.0' }
+    engines: { node: '>=10', pnpm: '>=1.0.0' }
     dependencies:
       '@babel/code-frame': 7.12.13
       '@types/json-schema': 7.0.7

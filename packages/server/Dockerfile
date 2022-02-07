@@ -7,21 +7,21 @@ COPY .eslintrc .
 COPY .eslintignore .
 COPY package.json .
 COPY tsconfig.json .
-COPY yarn.lock .
+COPY pnpm-lock.yaml .
 
 COPY packages/server packages/server
 COPY packages/domain packages/domain
 COPY packages/lib packages/lib
 
 # Install domain + lib + server dependencies
-RUN yarn install --pure-lockfile --non-interactive
+RUN pnpm install --pure-lockfile --non-interactive
 
 # Build common packages
-RUN yarn build:common
+RUN pnpm build:common
 
 # Build server then
 WORKDIR /usr/src/viz/packages/server
-RUN yarn build
+RUN pnpm build
 
 # Runner
 FROM node:14-alpine AS runner
@@ -31,7 +31,7 @@ COPY VERSION .
 
 # Copy the dist builds from builder
 COPY --from=builder /usr/src/viz/package.json .
-COPY --from=builder /usr/src/viz/yarn.lock .
+COPY --from=builder /usr/src/viz/pnpm-lock.yaml .
 COPY --from=builder /usr/src/viz/tsconfig.json .
 
 COPY --from=builder /usr/src/viz/packages/domain/package.json packages/domain/package.json
@@ -44,7 +44,7 @@ COPY --from=builder /usr/src/viz/packages/server/package.json packages/server/pa
 COPY --from=builder /usr/src/viz/packages/server/dist packages/server/dist
 
 # Install production dependencies
-RUN yarn install --pure-lockfile --non-interactive --production
+RUN pnpm install --pure-lockfile --non-interactive --production
 
 # Move to the server app
 WORKDIR /usr/src/viz/packages/server
@@ -54,4 +54,4 @@ RUN chown -R node:node /usr/src/viz/packages/server/
 
 # Launch the server with container
 ARG NODE_ENV=production
-CMD ["yarn", "start:prod"]
+CMD ["pnpm", "start:prod"]

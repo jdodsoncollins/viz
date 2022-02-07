@@ -1,5 +1,5 @@
 # Builder
-FROM node:14-alpine as builder
+FROM node:16.13.1-alpine3.14 as builder
 
 # Copy client and domain + lib packages
 WORKDIR /usr/src/viz/
@@ -7,7 +7,7 @@ COPY .eslintrc .
 COPY .eslintignore .
 COPY package.json .
 COPY tsconfig.json .
-COPY yarn.lock .
+COPY pnpm-lock.yaml .
 COPY VERSION .
 
 COPY packages/client packages/client
@@ -15,14 +15,14 @@ COPY packages/domain packages/domain
 COPY packages/lib packages/lib
 
 # Install domain + lib + client dependencies
-RUN yarn install --pure-lockfile --non-interactive
+RUN pnpm install --pure-lockfile --non-interactive
 
 # Build common packages
-RUN yarn build:common
+RUN pnpm build:common
 
 # Build client then
 WORKDIR /usr/src/viz/packages/client
-RUN yarn build
+RUN pnpm build
 
 # Runner
 FROM nginx:alpine as runner
